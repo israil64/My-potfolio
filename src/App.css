@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+#forCoding {
+  border-radius: 50%;
+  width: 350px;
+  height: 350px;
+}
+
+#heroSection {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/img/heroSectionImge.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
