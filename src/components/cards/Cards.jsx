@@ -1,11 +1,18 @@
 import React from "react";
-// import PropTypes from "prop-types";
-
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 const Cards = ({ title, description, link, img_url, code, language }) => {
-  console.log(language);
+  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
   return (
-    <>
-      <div class="max-w-[300px] bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 shadow-lg hover:shadow-cyan-500/50">
+    <motion.div ref={ref}>
+      <div
+        className={` max-w-[300px] bg-white border border-gray-200 rounded-lg  dark:bg-gray-800 dark:border-gray-700 shadow-blue-950 shadow-lg hover:shadow-cyan-500/50`}
+        style={{
+          transform: inView ? "none" : "translateX(100px)",
+          opacity: inView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+        }}
+      >
         <div className="object-cover p-2 rounded-md">
           <img src={img_url} alt="" />
         </div>
@@ -19,13 +26,13 @@ const Cards = ({ title, description, link, img_url, code, language }) => {
           </p>
           <div class="mt-4">
             <span class="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-              #{language[0]}
+              {language[0]}
             </span>
             <span class="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-              #
+              {language[1]}
             </span>
             <span class="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
-              #
+              {language[2]}
             </span>
           </div>
           <div className="flex justify-around items-center mt-2">
@@ -76,7 +83,7 @@ const Cards = ({ title, description, link, img_url, code, language }) => {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 

@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
@@ -12,6 +11,7 @@ const Nav = styled.nav`
   justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
+  height:5rem;
   position: sticky;
   top: 0;
   z-index: 1000;

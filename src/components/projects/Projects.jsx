@@ -1,6 +1,5 @@
-// src/components/Projects.js
-import React, { useState } from "react";
-import { ProjectsSection, Project, ProjectContainer } from "./styleComponent";
+import React, { useState, useRef } from "react";
+import { ProjectsSection, ProjectContainer } from "./styleComponent";
 import Cards from "../cards/Cards";
 
 const Projects = ({ projects }) => {

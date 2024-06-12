@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { FaReact } from "react-icons/fa";
-import { BsDatabase } from "react-icons/bs";
-import { SiCodesignal } from "react-icons/si";
 
 const AboutSection = styled.section`
   padding: 4rem 2rem;
@@ -27,11 +24,11 @@ const About = () => {
           </div>
         </div>
         <p className="text-lg text-gray-300 mb-8 ">
-          Hi, I’m Israil. I started with a BA degree, but my love for tech led
-          me to web development. As a Full-Stack Developer, I’m skilled in HTML,
-          CSS, JavaScript, and specialize in React.js for frontend. I use Python
-          and Django for backend. I’m excited to apply my skills and passion in
-          future projects.
+          Hi, I’m Israil. I've completed with a B.A degree, but my love for tech
+          led me to web development. As a Full-Stack Developer, I’m skilled in
+          HTML, CSS, JavaScript, and specialize in React.js for frontend. I use
+          Python and Django for backend. I’m excited to apply my skills and
+          passion in future projects.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-center capitalize font-bold">

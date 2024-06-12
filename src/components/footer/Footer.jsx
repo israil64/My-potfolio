@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <FooterSection>
      <footer className="py-6 text-center text-white">
-      <p>&copy; {new Date().getFullYear()} My Portfolio. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Israil.dev. All rights reserved.</p>
     </footer>
     </FooterSection>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   GlobalStyle,
   About,
@@ -9,6 +9,7 @@ import {
   Projects,
   Technologies,
 } from "./components";
+import { ThemeProvider } from "./components/Context/ThemContext";
 
 const App = () => {
   const projects = [
@@ -22,14 +23,7 @@ const App = () => {
         "https://th.bing.com/th/id/OIP.gXXdmJyJ73sL5_NVwhkfzwHaFj?rs=1&pid=ImgDetMain",
       category: "JS",
       code: "https://github.com/israil64/Weather-App",
-      language: [
-        "Html&CSS",
-        "Javascript",
-        "Tailwind",
-        "React",
-        "Python",
-        "Django",
-      ],
+      language: ["HTML", "Tailwind", "Javascript"],
     },
     {
       id: 1,
@@ -40,14 +34,7 @@ const App = () => {
       img_url: "src/assets/img/github.png",
       category: "JS",
       code: "https://github.com/israil64/GitHubUserSearch",
-      language: [
-        "Html&CSS",
-        "Javascript",
-        "Tailwind",
-        "React",
-        "Python",
-        "Django",
-      ],
+      language: ["HTML", "Javascript", "Tailwind"],
     },
     {
       id: 2,
@@ -59,14 +46,7 @@ const App = () => {
         "https://codingartistweb.com/wp-content/uploads/2021/03/random-password-generator-01.png",
       category: "React",
       code: "https://github.com/israil64/Generate_Password",
-      language: [
-        "Html&CSS",
-        "Javascript",
-        "Tailwind",
-        "React",
-        "Python",
-        "Django",
-      ],
+      language: ["HTML", "Tailwind", "React"],
     },
 
     {
@@ -79,33 +59,19 @@ const App = () => {
         "https://blog.stackfindover.com/wp-content/uploads/2021/09/js-currency-converter.jpg",
       category: "React",
       code: "https://github.com/israil64/currency-converter",
-      language: [
-        "Html&CSS",
-        "Javascript",
-        "Tailwind",
-        "React",
-        "Python",
-        "Django",
-      ],
+      language: ["HTML", "Tailwind", "React"],
     },
     {
       id: 4,
       title: "Website in React Js",
       description:
         "I developed a website using React.js, Vite, and Tailwind CSS. This project included advanced routing with react-router-dom, enabling seamless navigation and dynamic URL handling. I implemented dark mode and light mode features using the Context API. The project showcases my skills in modern web development, component reusability, and state management.",
-      link: "#3link",
+      link: "https://master--chaireactdom.netlify.app/",
       img_url:
         "https://velog.velcdn.com/images/jimmy0417/post/6cc2570d-dd7e-49f8-aec2-ae004736341c/blog_til_title_react_router.jpg",
       category: "React",
       code: "https://github.com/israil64/React-router-dom",
-      language: [
-        "Html&CSS",
-        "Javascript",
-        "Tailwind",
-        "React",
-        "Python",
-        "Django",
-      ],
+      language: ["HTML", "Tailwind", "React"],
     },
     {
       id: 5,
@@ -116,26 +82,31 @@ const App = () => {
       img_url: "src/assets/img/website.png",
       category: "JS",
       code: "https://github.com/israil64/John-Doe-Potfolio",
-      language: [
-        "Html&CSS",
-        "Javascript",
-        "Tailwind",
-        "React",
-        "Python",
-        "Django",
-      ],
+      language: ["HTML", "CSS", "Tailwind"],
     },
   ];
+  const [themeMode, setThemeMode] = useState("light");
+  function darkMode() {
+    setThemeMode("dark");
+  }
+  function lightMode() {
+    setThemeMode("light");
+  }
+  useEffect(() => {
+    document.querySelector("html").classList.remove("light", "dark");
+    document.querySelector("html").classList.add(themeMode);
+  }, [themeMode]);
   return (
-    <>
+    <ThemeProvider value={{ darkMode, lightMode, darkMode }}>
       <GlobalStyle />
       <Navbar />
       <Hero />
       <Projects projects={projects} />
       <Technologies />
       <About />
+      <Contact />
       <Footer />
-    </>
+    </ThemeProvider>
   );
 };
 
