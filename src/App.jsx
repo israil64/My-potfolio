@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./App.css";
 import {
   GlobalStyle,
   About,
@@ -85,6 +86,7 @@ const App = () => {
       language: ["HTML", "CSS", "Tailwind"],
     },
   ];
+  const [loading, setLoading] = useState(true);
   const [themeMode, setThemeMode] = useState("light");
   function darkMode() {
     setThemeMode("dark");
@@ -96,16 +98,30 @@ const App = () => {
     document.querySelector("html").classList.remove("light", "dark");
     document.querySelector("html").classList.add(themeMode);
   }, [themeMode]);
+
+  useEffect(() => {
+    // Simulate a 2-second loading delay
+    const timer = setTimeout(() => setLoading(false), 2000);
+
+    // Clean up the timer to prevent memory leaks
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <ThemeProvider value={{ darkMode, lightMode, darkMode }}>
       <GlobalStyle />
-      <Navbar />
-      <Hero />
-      <Projects projects={projects} />
-      <Technologies />
-      <About />
-      <Contact />
-      <Footer />
+      {loading ? (
+        <div className="loader"></div>
+      ) : (
+        <>
+          <Navbar />
+          <Hero />
+          <Projects projects={projects} />
+          <Technologies />
+          <About />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </ThemeProvider>
   );
 };
