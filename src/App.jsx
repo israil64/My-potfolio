@@ -88,6 +88,7 @@ const App = () => {
   ];
   const [loading, setLoading] = useState(true);
   const [themeMode, setThemeMode] = useState("light");
+
   function darkMode() {
     setThemeMode("dark");
   }
@@ -107,7 +108,7 @@ const App = () => {
     return () => clearTimeout(timer);
   }, []);
   return (
-    <ThemeProvider value={{ darkMode, lightMode, darkMode }}>
+    <ThemeProvider value={{ darkMode, lightMode, themeMode }}>
       <GlobalStyle />
       {loading ? (
         <div className="loader"></div>
