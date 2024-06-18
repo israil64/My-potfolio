@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { ReactTyped } from "react-typed";
 import forCodingGif from "../../assets/img/forCoding.gif";
 import "../../App.css";
 import { CiSaveDown1 } from "react-icons/ci";
+
 const Hero = () => {
   function downloadResume() {
-    setIsAnimating(true);
     let resumePath = "../../assects/img/Personal-Resume.pdf";
     let link = document.createElement("a");
     link.href = resumePath;
@@ -18,8 +18,8 @@ const Hero = () => {
     <>
       <section class="dark:bg-gray-900 max-sm:mb-64" id="heroSection">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-12 gap-4 lg:py-16">
-          <div class="lg:col-span-7 md:text-center lg:text-center">
-            <h1 class="max-w-xl  mt-16 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
+          <div className="lg:col-span-7 md:text-center lg:text-center">
+            <h1 className="max-w-xl  mt-16 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight text-white">
               <span>👋</span> Welcome to My Portfolio
             </h1>
             <p className="max-w-xl mt-5 md:text-3xl lg:text-4xl text-gray-400  text-2xl">

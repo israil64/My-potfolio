@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import { IoLogoWhatsapp } from "react-icons/io5";
+
 const WhatsApp = ({ phoneNumber }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -9,7 +10,6 @@ const WhatsApp = ({ phoneNumber }) => {
     window.open(url, "_blank");
   };
 
-  
   return (
     <div ref={ref}>
       <button

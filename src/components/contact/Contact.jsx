@@ -1,68 +1,160 @@
-import React from "react";
-import styled from "styled-components";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import WhatsApp from "../soicalMedia/WhatsApp";
-const ContactSection = styled.section`
-  padding: 4rem 2rem;
-  text-align: center;
-  background: #fff;
-`;
+// import React from "react";
+// import styled from "styled-components";
+// const ContactSection = styled.section`
+//   padding: 4rem 2rem;
+//   text-align: center;
+//   background: #fff;
+// `;
 
-const Contact = () => {
-  let phoneNumber = "+916200643486";
+// const Contact = () => {
+ 
+//   return (
+//     <ContactSection id="contact" className="bg-white dark:bg-black ">
+    
+//     </ContactSection>
+//   );
+// };
+
+// export default Contact;
+import React from "react";
+
+export default function Contact() {
   return (
-    <ContactSection id="contact">
-      <section class="relative overflow-hidden bg-white py-8">
-        <div class="container relative z-10 mx-auto px-4">
-          <div class="-m-8 flex flex-wrap items-center justify-between">
-            <div class="w-auto p-8">
-              <a href="#">
-                <div class="inline-flex items-center">
-                  <svg
-                    width="40"
-                    height="46"
-                    viewBox="0 0 50 56"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M23.2732 0.2528C20.8078 1.18964 2.12023 12.2346 1.08477 13.3686C0 14.552 0 14.7493 0 27.7665C0 39.6496 0.0986153 41.1289 0.83823 42.0164C2.12023 43.5449 23.2239 55.4774 24.6538 55.5267C25.9358 55.576 46.1027 44.3832 48.2229 42.4602C49.3077 41.474 49.3077 41.3261 49.3077 27.8158C49.3077 14.3055 49.3077 14.1576 48.2229 13.1714C46.6451 11.7415 27.1192 0.450027 25.64 0.104874C24.9497 -0.0923538 23.9142 0.00625992 23.2732 0.2528ZM20.2161 21.8989C20.2161 22.4906 18.9835 23.8219 17.0111 25.3997C15.2361 26.7803 13.8061 27.9637 13.8061 28.0623C13.8061 28.1116 15.2361 29.0978 16.9618 30.2319C18.6876 31.3659 20.2655 32.6479 20.4134 33.0917C20.8078 34.0286 19.871 35.2119 18.8355 35.2119C17.8001 35.2119 9.0233 29.3936 8.67815 28.5061C8.333 27.6186 9.36846 26.5338 14.3485 22.885C17.6521 20.4196 18.4904 20.0252 19.2793 20.4196C19.7724 20.7155 20.2161 21.3565 20.2161 21.8989ZM25.6893 27.6679C23.4211 34.9161 23.0267 35.7543 22.1391 34.8668C21.7447 34.4723 22.1391 32.6479 23.6677 27.9637C26.2317 20.321 26.5275 19.6307 27.2671 20.3703C27.6123 20.7155 27.1685 22.7864 25.6893 27.6679ZM36.0932 23.2302C40.6788 26.2379 41.3198 27.0269 40.3337 28.1609C39.1503 29.5909 31.6555 35.2119 30.9159 35.2119C29.9298 35.2119 28.9436 33.8806 29.2394 33.0424C29.3874 32.6479 30.9652 31.218 32.7403 29.8867L35.9946 27.4706L32.5431 25.1532C30.6201 23.9205 29.0915 22.7371 29.0915 22.5892C29.0915 21.7509 30.2256 20.4196 30.9159 20.4196C31.3597 20.4196 33.6771 21.7016 36.0932 23.2302Z"
-                      fill="black"
-                    ></path>
-                  </svg>
-                  <span class="ml-4 text-lg font-bold">Israil.Dev</span>
+    <div className="relative flex items-top justify-center min-h-[700px] bg-white sm:items-center sm:pt-0">
+      <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
+        <div className="mt-8 overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="p-6 mr-2 bg-gray-100 sm:rounded-lg">
+              <h1 className="text-3xl sm:text-4xl text-gray-800 font-extrabold tracking-tight">
+                Get in touch:
+              </h1>
+              <p className="text-normal text-lg sm:text-xl font-medium text-gray-600 mt-2">
+                Fill in the form to start a conversation
+              </p>
+
+              <div className="flex items-center mt-8 text-gray-600">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  className="w-8 h-8 text-gray-500"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+                <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                  Acme Inc, Street, State, Postal Code
                 </div>
-              </a>
-            </div>
-            <div class="w-auto p-8">
-              <div class="-m-1.5 flex flex-wrap">
-                <div class="w-auto p-1.5">
-                  <div class="text-green-600 flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400 hover:scale-125 transition-transform duration-300">
-                    <WhatsApp phoneNumber={phoneNumber} />
-                  </div>
+              </div>
+
+              <div className="flex items-center mt-4 text-gray-600">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  className="w-8 h-8 text-gray-500"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+                <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                  +44 1234567890
                 </div>
-                <div class="w-auto p-1.5">
-                  <a href="https://linkedin.com/in/md-israil-57b356282">
-                    <div class="text-sky-400 flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400 hover:scale-125 transition-transform duration-300">
-                      <FaLinkedinIn />
-                    </div>
-                  </a>
-                </div>
-                <div class="w-auto p-1.5">
-                  <a href="https://github.com/israil64">
-                    <div class=" text-gray-400 flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400 hover:scale-125 transition-transform duration-300">
-                      <FaGithub />
-                    </div>
-                  </a>
+              </div>
+
+              <div className="flex items-center mt-2 text-gray-600">
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  viewBox="0 0 24 24"
+                  className="w-8 h-8 text-gray-500"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                <div className="ml-4 text-md tracking-wide font-semibold w-40">
+                  info@acme.org
                 </div>
               </div>
             </div>
+
+            <form className="p-6 flex flex-col justify-center">
+              <div className="flex flex-col">
+                <label for="name" className="hidden">
+                  Full Name
+                </label>
+                <input
+                  type="name"
+                  name="name"
+                  id="name"
+                  placeholder="Full Name"
+                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                />
+              </div>
+
+              <div className="flex flex-col mt-2">
+                <label for="email" className="hidden">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email"
+                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                />
+              </div>
+
+              <div className="flex flex-col mt-2">
+                <label for="tel" className="hidden">
+                  Number
+                </label>
+                <input
+                  type="tel"
+                  name="tel"
+                  id="tel"
+                  placeholder="Telephone Number"
+                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="md:w-32 bg-orange-700 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-orange-600 transition ease-in-out duration-300"
+              >
+                Submit
+              </button>
+            </form>
           </div>
         </div>
-      </section>
-    </ContactSection>
+      </div>
+    </div>
   );
-};
-
-export default Contact;
+}

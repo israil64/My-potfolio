@@ -3,7 +3,6 @@ import "./App.css";
 import {
   GlobalStyle,
   About,
-  Contact,
   Footer,
   Hero,
   Navbar,
@@ -101,10 +100,8 @@ const App = () => {
   }, [themeMode]);
 
   useEffect(() => {
-    // Simulate a 2-second loading delay
     const timer = setTimeout(() => setLoading(false), 2000);
 
-    // Clean up the timer to prevent memory leaks
     return () => clearTimeout(timer);
   }, []);
   return (
@@ -119,7 +116,7 @@ const App = () => {
           <Projects projects={projects} />
           <Technologies />
           <About />
-          <Contact />
+
           <Footer />
         </>
       )}

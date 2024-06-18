@@ -2,7 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 const Cards = ({ title, description, link, img_url, code, language }) => {
-  const { ref, inView } = useInView({ threshold: 0.1, triggerOnce: false });
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: true,
+  });
   return (
     <motion.div ref={ref}>
       <div

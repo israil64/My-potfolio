@@ -17,7 +17,7 @@ export default function Theme() {
       className="mx-auto flex h-10 w-10 items-center justify-center rounded-full dark:bg-inherit cursor-pointer"
       onClick={handleBtn}
     >
-      {themeMode === "dark" ? (
+      {themeMode !== "dark" ? (
         <svg
           className="w-9 h-9 text-gray-800 dark:text-blue-400"
           aria-hidden="true"

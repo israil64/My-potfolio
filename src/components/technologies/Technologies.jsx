@@ -13,11 +13,11 @@ import { SiMysql } from "react-icons/si";
 import { SiCanva } from "react-icons/si";
 import { FaFigma } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const Technologies = () => {
   const Selection = styled.div`
     background: linear-gradient(to right, #00003f, #00002f, #00003f);
-    ${"" /* background-image: url("/src/assets/img/heroSectionImge.png"); */}
     backgroun-size: cover;
     background-position: center;
     with: 100vw;
@@ -40,7 +40,13 @@ const Technologies = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 ">
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <div>
               <FaReact />
             </div>
@@ -108,9 +114,15 @@ const Technologies = () => {
                 </svg>
               </span>
             </p>
-          </div>
+          </motion.div>
 
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <div>
               <BsDatabase />
             </div>
@@ -129,8 +141,15 @@ const Technologies = () => {
                 <SiMysql />
               </span>
             </p>
-          </div>
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            viewport={{ once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <div>
               <SiCodesignal />
             </div>
@@ -143,7 +162,7 @@ const Technologies = () => {
                 <SiCanva />
               </span>
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </Selection>

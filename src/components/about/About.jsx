@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 const AboutSection = styled.section`
   padding: 4rem 2rem;
@@ -23,36 +24,78 @@ const About = () => {
             </p>
           </div>
         </div>
-        <p className="text-lg text-gray-300 mb-8 ">
+
+        <motion.h1
+          initial={{ opacity: 0, scale: 0, y: 5 }}
+          whileInView={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ root: scrollY, once: true }}
+          className="text-lg text-gray-300 mb-8 "
+        >
           Hi, I’m Israil. I've completed with a B.A degree, but my love for tech
           led me to web development. As a Full-Stack Developer, I’m skilled in
           HTML, CSS, JavaScript, and specialize in React.js for frontend. I use
           Python and Django for backend. I’m excited to apply my skills and
           passion in future projects.
-        </p>
+        </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6 text-center capitalize font-bold">
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ root: scrollY ,once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <p className="text-gray-400 ">2022</p>
             <p className="text-gray-300">Started my journey with web</p>
-          </div>
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            viewport={{ root: scrollY ,once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <p className="text-gray-400">2023</p>
             <p className="text-gray-300 ">learning start Front-End</p>
-          </div>
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+            viewport={{ root: scrollY ,once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <p className="text-gray-400">2023</p>
             <p className="text-gray-300 ">Shared my projects on Github</p>
-          </div>
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ root: scrollY ,once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <p className="text-gray-400">2024</p>
             <p className="text-gray-300">worked as Freelances developer</p>
-          </div>
-          <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, scale: 0, y: 5 }}
+            whileInView={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ root: scrollY ,once: true }}
+            className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+          >
             <p className="text-gray-400">2024</p>
             <p className="text-gray-300">learning start back-end</p>
-          </div>
+          </motion.div>
         </div>
+        {/* end */}
         <div>
           <h2 className="text-3xl font-bold text-white mt-8">
             My Learning Journey
@@ -63,7 +106,14 @@ const About = () => {
             a snapshot of my learning journey so far:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-center">
-            <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+            <motion.div
+              initial={{ opacity: 0, scale: 0, y: 5 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ root: scrollY ,once: true }}
+             
+              className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+            >
               <h2 className="text-xl font-semibold text-white mb-2">
                 Learning HTML & CSS
               </h2>
@@ -71,8 +121,16 @@ const About = () => {
                 I started with the basics of HTML and CSS to build static web
                 pages.
               </p>
-            </div>
-            <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0, y: 5 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              viewport={{ root: scrollY, once: true }}
+
+              className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+            >
               <h2 className="text-xl font-semibold text-white mb-2">
                 JavaScript
               </h2>
@@ -80,8 +138,14 @@ const About = () => {
                 I then moved on to learning JavaScript to add interactivity to
                 my web pages.
               </p>
-            </div>
-            <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0, y: 5 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ root: scrollY, once: true }}
+              className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+            >
               <h2 className="text-xl font-semibold text-white mb-2">
                 React.js
               </h2>
@@ -89,8 +153,14 @@ const About = () => {
                 Currently, I am focusing on mastering React.js to build dynamic
                 and responsive web applications.
               </p>
-            </div>
-            <div className="border rounded p-4 shadow-lg shadow-cyan-500/50">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0, y: 5 }}
+              whileInView={{ opacity: 1, scale: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.7 }}
+              viewport={{ root: scrollY, once: true }}
+              className="border rounded p-4 shadow-lg shadow-cyan-500/50"
+            >
               <h2 className="text-xl font-semibold text-white mb-2">
                 Future Goals
               </h2>
@@ -98,7 +168,7 @@ const About = () => {
                 My goal is to become a full-stack developer and work on
                 real-world projects to hone my skills.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
