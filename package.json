@@ -10,7 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-select": "^2.1.1",
+    "@shadcn/ui": "^0.0.4",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.2.10",
+    "lucide-react": "^0.401.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.2.1",
@@ -18,9 +24,12 @@
     "react-router-dom": "^6.23.1",
     "react-scroll": "^1.9.0",
     "react-typed": "^2.0.12",
-    "styled-components": "^6.1.11"
+    "styled-components": "^6.1.11",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@types/node": "^20.14.10",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",

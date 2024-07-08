@@ -27,16 +27,16 @@ const Cards = ({ title, description, link, img_url, code, language }) => {
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-start ">
             {description}
           </p>
-          <div class="mt-4">
-            <span class="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+          <div class="mt-4 flex justify-around items-center">
+            <span class="mb-2 mr-2 inline-block rounded bg-gray-800 px-3 py-1 text-[12px] font-semibold text-white shadow-md">
               {language[0]}
             </span>
-            <span class="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+            <span class="mb-2 mr-2 inline-block rounded bg-gray-800 px-3 py-1 text-[12px] font-semibold text-white">
               {language[1]}
             </span>
-            <span class="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+            {/* <span class="mb-2 mr-2 inline-block rounded bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
               {language[2]}
-            </span>
+            </span> */}
           </div>
           <div className="flex justify-around items-center mt-2">
             <a

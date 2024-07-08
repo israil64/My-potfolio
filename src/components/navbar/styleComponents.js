@@ -1,17 +1,15 @@
 import styled from "styled-components";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
-
 const Nav = styled.nav`
-  background: linear-gradient(to right, #00003f, #00002f, #00003f);
-  color: #fff;
+  ${"" /* background: linear-gradient(to right, #00003f, #00002f, #00003f); */}
   font-size: bold;
   letter-spacing: 2px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 1rem 2rem;
-  height:5rem;
+  height: 5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -52,12 +50,7 @@ const SocialIcon = styled.div`
   align-items: center;
 
   a {
-    color: #fff;
     cursor: pointer;
-
-    &:hover {
-      color: lightgray;
-    }
 
     svg {
       font-size: 1.5rem;
@@ -71,13 +64,12 @@ const SocialIcon = styled.div`
 `;
 
 const NavLink = styled(ScrollLink)`
-  color: #fff;
   margin: 0 1rem;
   text-decoration: none;
   cursor: pointer;
   padding: 2px 3px;
   &.active {
-    border-bottom: 2px solid #f4f4f4;
+    border-bottom: 3px solid red;
   }
 
   &:hover {
@@ -101,4 +93,4 @@ const HamburgerIcon = styled.div`
     cursor: pointer;
   }
 `;
-export {Nav,NavLink,NavLinksContainer,SocialIcon,HamburgerIcon,NavLinks}
+export { Nav, NavLink, NavLinksContainer, SocialIcon, HamburgerIcon, NavLinks };

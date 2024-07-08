@@ -1,4 +1,3 @@
-// src/components/Footer.js
 import React from "react";
 import styled from "styled-components";
 import { FaLinkedinIn } from "react-icons/fa";
@@ -17,12 +16,12 @@ const Footer = () => {
   let phoneNumber = "+916200643486";
   return (
     <FooterSection>
-      <section class="relative overflow-hidden   py-8 w-[100%]">
-        <div class="container relative z-10 mx-auto px-4 bg-white w-[100%] text-black ">
+      <section class="relative overflow-hidden  py-8 w-[100%] bg-white dark:bg-custom-gradient text-black/50 text-white rounded-sm">
+        <div class="container relative z-10 mx-auto px-4  w-[100%] text-black/50 ">
           <div class="-m-8 flex flex-wrap items-center justify-between">
             <div class="w-auto p-8">
               <a href="#">
-                <div class="inline-flex items-center">
+                <div className="inline-flex items-center rounded-sm dark:text-black text-black">
                   <svg
                     width="40"
                     height="46"
@@ -35,7 +34,9 @@ const Footer = () => {
                       fill="black"
                     ></path>
                   </svg>
-                  <span class="ml-4 text-lg font-bold">Israil.Dev</span>
+                  <span class="ml-4 text-lg font-bold text-black/50 dark:text-white">
+                    Israil.Dev
+                  </span>
                 </div>
               </a>
             </div>
@@ -45,7 +46,7 @@ const Footer = () => {
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1, y: 5 }}
                   transition={{ duration: 1 }}
-                  class="w-auto p-1.5"
+                  className="w-auto p-1.5 text-black/50 dark:text-white"
                 >
                   <div class="text-green-600 flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400 hover:scale-125 transition-transform duration-300">
                     <WhatsApp phoneNumber={phoneNumber} />
@@ -55,7 +56,7 @@ const Footer = () => {
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1, y: 10 }}
                   transition={{ duration: 1 }}
-                  className="w-auto p-1.5"
+                  className="w-auto p-1.5 text-black/50 dark:text-white"
                 >
                   <a
                     href="https://linkedin.com/in/md-israil-57b356282"
@@ -70,7 +71,7 @@ const Footer = () => {
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1, y: 5 }}
                   transition={{ duration: 1 }}
-                  class="w-auto p-1.5"
+                  class="w-auto p-1.5 text-black/50 dark:text-white"
                 >
                   <a href="https://github.com/israil64" target="_blank">
                     <div class=" text-gray-400 flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 hover:border-gray-400 hover:scale-125 transition-transform duration-300">
@@ -83,9 +84,10 @@ const Footer = () => {
           </div>
         </div>
       </section>
-      <footer className="py-6 text-center text-white">
-        <p>
-          &copy; {new Date().getFullYear()} Israil.dev. All rights reserved.
+      <footer className="py-6 text-center bg-white dark:bg-custom-gradient text-black/50 dark:text-white max-sm:text-lg max-sm:p-2">
+        <p className="max-sm:pb-5">
+          &copy; {new Date().getFullYear()}{" "}
+          <strong>Devlop by Israil.dev. All rights reserved.</strong>
         </p>
       </footer>
     </FooterSection>

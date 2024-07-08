@@ -7,10 +7,10 @@
 // `;
 
 // const Contact = () => {
- 
+
 //   return (
 //     <ContactSection id="contact" className="bg-white dark:bg-black ">
-    
+
 //     </ContactSection>
 //   );
 // };

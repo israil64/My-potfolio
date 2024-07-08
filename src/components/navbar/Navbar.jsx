@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { animateScroll as scroll, scroller } from "react-scroll";
-import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
+import { BsFilterRight } from "react-icons/bs";
 
 import {
   Nav,
@@ -27,9 +28,8 @@ const Navbar = () => {
       offset: -5,
     });
   }, []);
-
   return (
-    <Nav className="bg-black/5">
+    <Nav className="dark:bg-custom-gradient  dark:text-white bg-white text-black font-semibold shadow-md">
       <h1
         onClick={() => scroll.scrollToTop()}
         className="cursor-pointer text-lg font-bold"
@@ -37,7 +37,7 @@ const Navbar = () => {
         Israil.Dev
       </h1>
       <HamburgerIcon onClick={toggle}>
-        {isOpen ? <FaTimes /> : <FaBars />}
+        {isOpen ? <FaTimes /> : <BsFilterRight />}
       </HamburgerIcon>
       <NavLinksContainer isOpen={isOpen}>
         <NavLinks>
@@ -79,9 +79,9 @@ const Navbar = () => {
           </NavLink>
         </NavLinks>
       </NavLinksContainer>
-      <SocialIcon className="group/item">
+      <SocialIcon className="group/item dark:text-black">
         <a
-          className="flex items-center space-x-1 group hover:translate-x-0.5"
+          className="flex items-center space-x-1 group hover:translate-x-0.5 text-black dark:text-white"
           href="https://github.com/israil64"
           target="_blank"
           rel="noopener noreferrer"
@@ -90,7 +90,7 @@ const Navbar = () => {
           <FaGithub />
         </a>
         <a
-          className="flex items-center space-x-1 group ml-4 hover:translate-x-0.5"
+          className="flex items-center space-x-1 group ml-4 hover:translate-x-0.5 text-blue-900 dark:text-white"
           href="https://linkedin.com/in/md-israil-57b356282"
           target="_blank"
           rel="noopener noreferrer"
