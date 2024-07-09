@@ -25,13 +25,15 @@ const NavLinksContainer = styled.div`
 
   @media (max-width: 768px) {
     position: absolute;
-    top: 60px;
+    top: 85px;
     left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
     width: 100%;
     height: 100vh;
-    background: #333;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     flex-direction: column;
-    justify-content: center;
+    ${"" /* justify-content: center; */}
     transition: 0.3s all ease;
   }
 `;

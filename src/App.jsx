@@ -31,7 +31,7 @@ const App = () => {
       description:
         "I built GitHubUserSearch, a web app usingTailwind Css, and JavaScript. It lets users find GitHub accounts by username using the GitHub API. The app shows 'not found' for incorrect usernames and indicates internet connectivity status.",
       link: "https://israil64.github.io/GitHubUserSearch/",
-      img_url: "src/assets/img/github.png",
+      img_url: "assets/img/github.png",
       category: "JS",
       code: "https://github.com/israil64/GitHubUserSearch",
       language: ["Javascript", "Tailwind "],
@@ -79,7 +79,7 @@ const App = () => {
       description:
         "This is my website created using HTML and CSS. I made it while learning web development. I've used animations, hover effects, skew transitions, and text typing effects on it.",
       link: "https://israil64.github.io/John-Doe-Potfolio/",
-      img_url: "src/assets/img/website.png",
+      img_url: "assets/img/website.png",
       category: "JS",
       code: "https://github.com/israil64/John-Doe-Potfolio",
       language: ["HTML", "CSS"],

@@ -1,12 +1,12 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
-import forCodingGif from "../../assets/img/forCoding.gif";
+import forCodingGif from "../../../public/assets/img/forCoding.gif";
 import "../../App.css";
 import { CiSaveDown1 } from "react-icons/ci";
 
 const Hero = () => {
   function downloadResume() {
-    let resumePath = "../../assects/img/Personal-Resume.pdf";
+    let resumePath = "../../../public/assets/Personal-Resume.pdf";
     let link = document.createElement("a");
     link.href = resumePath;
     link.download = "Personal-Resume.pdf";
@@ -18,7 +18,7 @@ const Hero = () => {
     <>
       <section class="max-sm:mb-4 bg-white dark:bg-custom-gradient pb-10">
         <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:grid-cols-12 gap-4 lg:py-16 max-sm:py-3">
-          <div className="lg:col-span-7 flex flex-col justify-center items-start order-2 lg:order-1">
+          <div className="lg:col-span-7 flex flex-col justify-around items-start order-2 lg:order-1 ml-28 max-sm:ml-2">
             <h1 className="max-w-xl mt-16 text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight dark:text-white text-black/50 max-sm:ml-2 max-sm:mt-5">
               <span></span> Welcome to My Portfolio
             </h1>
@@ -40,7 +40,7 @@ const Hero = () => {
                 />
               </span>
             </p>
-            <div className="flex flex-wrap mt-11 max-sm:ml-1" id="resume">
+            <div className=" mt-11 max-sm:ml-1" id="resume">
               <button
                 onClick={downloadResume}
                 className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800"

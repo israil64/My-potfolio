@@ -29,7 +29,7 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <Nav className="dark:bg-custom-gradient  dark:text-white bg-white text-black font-semibold shadow-md">
+    <Nav className="dark:bg-custom-gradient  dark:text-white bg-white text-black/55 font-semibold shadow-md">
       <h1
         onClick={() => scroll.scrollToTop()}
         className="cursor-pointer text-lg font-bold"
